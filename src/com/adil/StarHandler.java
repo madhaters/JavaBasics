@@ -6,7 +6,7 @@ public class StarHandler {
 
         for (int i = 1; i <= a; i++) {
             //jk
-            for (int j = 4; j >= i; j--) {
+            for (int j = a; j >= i; j--) {
 
                 System.out.print(" ");
             }
