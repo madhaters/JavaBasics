@@ -5,6 +5,6 @@ public class Main {
 
     public static void main(String[] args) {
         StarHandler s1 = new StarHandler();
-        s1.triangleStar(3);
+        s1.triangleStar(5);
     }
 }
