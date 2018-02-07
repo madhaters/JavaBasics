@@ -1,7 +1,7 @@
 package com.adil;
 
-public class starHandler {
-    public void add() {
+public class StarHandler {
+    public void Trianglestar() {
         for (int i = 1; i <= 5; i++) {
 
             for (int j = 4; j >= i; j--)
