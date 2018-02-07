@@ -1,8 +1,10 @@
 package com.adil;
 
+
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("hello world");
+        starHandler s1 = new starHandler();
+        s1.add();
     }
 }
