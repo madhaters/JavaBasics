@@ -4,35 +4,59 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class HandleArrays {
-    public void arrays() {
+    public void mainManu() {
+        int choicenumber;
+        //   Scanner sc = new Scanner(System.in);
+        //  choicenumber = sc.nextInt();
+
+        do {
         System.out.println("Welcome to Array class");
-        System.out.println("1.Check if Array contain a number");
-        System.out.println("2.Sum the elements of array");
-        System.out.println("3.Arrays in ascending order");
-        System.out.println("4.Arrays in decending order");
-        System.out.println("5.Make all the elements in array with zero");
-        System.out.println("6.Dublicate numbers");
-        System.out.println("7.Delete the elements from array");
-        //  int ChoiceNumber;
-        //System.out.println("Enter your choice");
-        //Scanner sc=new Scanner(System.in);
-        //ChoiceNumber=sc.nextInt();
+            System.out.println("1:Check if Array contain a number");
+            System.out.println("2:Sum the elements of array");
+            System.out.println("3:Arrays in ascending order");
+            System.out.println("4:Arrays in decending order");
+            System.out.println("5:Make all the elements in array with zero");
+            System.out.println("6:Dublicate numbers");
+            System.out.println("7:Delete the elements from array");
+            System.out.println("0:Exit");
+            // int choicenumber;
+            System.out.println("Enter your choice");
+            Scanner sc = new Scanner(System.in);
+            choicenumber = sc.nextInt();
+            switch (choicenumber) {
+                case 1:
+                    checkNumber(8);
+                    break;
+                case 2:
+                    sum();
+                    break;
+                case 3:
+                    ascendingOrder();
+                    break;
+                case 4:
+                    decendingOrder();
+                    break;
+                case 5:
+                    dublicateNumber();
+                    break;
+                case 6:
+                    elementsZero();
+                    break;
+                case 7:
+                    delete();
+                    break;
+
+
+            }
+        } while (choicenumber != 0);
     }
 
-    int[] intArray = new int[]{1, 2, 3, 3, 5, 6, 7, 8, 8, 890};
+    int[] intArray = new int[]{1, 2, 3, 3, 5, 6, 7, 8, 9, 890};
 
     public void getInputs() {
 
         for (int i = 0; i < intArray.length; i++)
             System.out.println("Element at index " + i + " : " + intArray[i]);
-        //checkNumber(1);
-        //sum();
-        //ascending_order();
-        //decending_order();
-
-        //dublicate_number();
-        //delete();
-        // elements_zero();
     }
 
     public void checkNumber(int number) {
@@ -54,7 +78,7 @@ public class HandleArrays {
         System.out.println("sum of number is:" + sum);
     }
 
-    public void ascending_order() {
+    public void ascendingOrder() {
 
         Arrays.sort(intArray);
         for (int i = 0; i < intArray.length; i++) {
@@ -66,7 +90,7 @@ public class HandleArrays {
 
     }
 
-    public void decending_order() {
+    public void decendingOrder() {
 
         for (int i = intArray.length - 1; i >= 0; i--) {
             //Arrays.sort(arr); // not here
@@ -74,14 +98,14 @@ public class HandleArrays {
         }
     }
 
-    public void elements_zero() {
+    public void elementsZero() {
         for (int i = 0; i < intArray.length; i++) {
             intArray[i] = 0;
             System.out.println(intArray[i]);
         }
     }
 
-    public void dublicate_number() {
+    public void dublicateNumber() {
 
 
         for (int i = 0; i < intArray.length - 1; i++) {
@@ -99,20 +123,20 @@ public class HandleArrays {
 
     public void delete() {
         System.out.println("Original Array : " + Arrays.toString(intArray));
-        int removeIndex = 2;
+        int removeindex = 2;
 
-        for (int i = removeIndex; i < intArray.length - 1; i++) {
+        for (int i = removeindex; i < intArray.length - 1; i++) {
             intArray[i] = intArray[i + 1];
         }
         System.out.println("After removing the second element: " + Arrays.toString(intArray));
     }
 
-    public void mainFunction() {
-        int ChoiceNumber;
+    /*public void mainFunction() {
+        int choicenumber;
         System.out.println("Enter your choice");
         Scanner sc = new Scanner(System.in);
-        ChoiceNumber = sc.nextInt();
-        switch (ChoiceNumber) {
+        choicenumber = sc.nextInt();
+        switch (choicenumber) {
             case 1:
                 checkNumber(8);
                 break;
@@ -120,16 +144,16 @@ public class HandleArrays {
                 sum();
                 break;
             case 3:
-                ascending_order();
+                ascendingOrder();
                 break;
             case 4:
-                decending_order();
+                decendingOrder();
                 break;
             case 5:
-                dublicate_number();
+                dublicateNumber();
                 break;
             case 6:
-                elements_zero();
+                elementsZero();
                 break;
             case 7:
                 delete();
@@ -138,6 +162,6 @@ public class HandleArrays {
 
         }
 
-    }
+    }*/
 }
 
