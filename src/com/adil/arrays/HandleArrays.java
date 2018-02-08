@@ -1,54 +1,65 @@
 package com.adil.arrays;
 
 import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class HandleArrays {
+
     public void mainManu() {
-        int choicenumber;
-        //   Scanner sc = new Scanner(System.in);
-        //  choicenumber = sc.nextInt();
 
+        int choiceNumber = 0;
         do {
-        System.out.println("Welcome to Array class");
-            System.out.println("1:Check if Array contain a number");
-            System.out.println("2:Sum the elements of array");
-            System.out.println("3:Arrays in ascending order");
-            System.out.println("4:Arrays in decending order");
-            System.out.println("5:Make all the elements in array with zero");
-            System.out.println("6:Dublicate numbers");
-            System.out.println("7:Delete the elements from array");
-            System.out.println("0:Exit");
-            // int choicenumber;
-            System.out.println("Enter your choice");
-            Scanner sc = new Scanner(System.in);
-            choicenumber = sc.nextInt();
-            switch (choicenumber) {
-                case 1:
-                    checkNumber(8);
-                    break;
-                case 2:
-                    sum();
-                    break;
-                case 3:
-                    ascendingOrder();
-                    break;
-                case 4:
-                    decendingOrder();
-                    break;
-                case 5:
-                    dublicateNumber();
-                    break;
-                case 6:
-                    elementsZero();
-                    break;
-                case 7:
-                    delete();
-                    break;
+            try {
+
+                System.out.println("Welcome to Array class");
+                System.out.println("1:Check if Array contain a number");
+                System.out.println("2:Sum the elements of array");
+                System.out.println("3:Arrays in ascending order");
+                System.out.println("4:Arrays in decending order");
+                System.out.println("5:Make all the elements in array with zero");
+                System.out.println("6:Dublicate numbers");
+                System.out.println("7:Delete the elements from array");
+                System.out.println("0:Exit");
+                System.out.print("Enter your choice");
+                Scanner sc = new Scanner(System.in);
+                choiceNumber = sc.nextInt();
+
+                if (choiceNumber > 7) {
+                    throw new InputMismatchException("Option not in menu.");
+                }
+
+                switch (choiceNumber) {
+                    case 1:
+                        checkNumber(8);
+                        break;
+                    case 2:
+                        sum();
+                        break;
+                    case 3:
+                        ascendingOrder();
+                        break;
+                    case 4:
+                        decendingOrder();
+                        break;
+                    case 5:
+                        dublicateNumber();
+                        break;
+                    case 6:
+                        elementsZero();
+                        break;
+                    case 7:
+                        delete();
+                        break;
 
 
+                }
+            } catch (InputMismatchException ex) {
+                System.out.println("plz enter the valid input");
             }
-        } while (choicenumber != 0);
+        }
+        while (choiceNumber != 0);
+
     }
 
     int[] intArray = new int[]{1, 2, 3, 3, 5, 6, 7, 8, 9, 890};
@@ -64,7 +75,7 @@ public class HandleArrays {
             if (searchnumber == number) {
 
                 System.out.println("search number is :" + number);
-                //  System.out.println("search number is:"number);
+
             }
     }
 
@@ -73,7 +84,7 @@ public class HandleArrays {
 
         for (int number : intArray) {
             sum += number;
-            //    System.out.println("sum of number is:"+number);
+
         }
         System.out.println("sum of number is:" + sum);
     }
@@ -93,7 +104,7 @@ public class HandleArrays {
     public void decendingOrder() {
 
         for (int i = intArray.length - 1; i >= 0; i--) {
-            //Arrays.sort(arr); // not here
+
             System.out.println(" " + intArray[i]);
         }
     }
@@ -131,37 +142,5 @@ public class HandleArrays {
         System.out.println("After removing the second element: " + Arrays.toString(intArray));
     }
 
-    /*public void mainFunction() {
-        int choicenumber;
-        System.out.println("Enter your choice");
-        Scanner sc = new Scanner(System.in);
-        choicenumber = sc.nextInt();
-        switch (choicenumber) {
-            case 1:
-                checkNumber(8);
-                break;
-            case 2:
-                sum();
-                break;
-            case 3:
-                ascendingOrder();
-                break;
-            case 4:
-                decendingOrder();
-                break;
-            case 5:
-                dublicateNumber();
-                break;
-            case 6:
-                elementsZero();
-                break;
-            case 7:
-                delete();
-                break;
-
-
-        }
-
-    }*/
 }
 
