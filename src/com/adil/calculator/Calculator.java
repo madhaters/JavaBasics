@@ -13,19 +13,21 @@ public class Calculator {
             System.out.print("Input number one: ");
             Scanner scanner = new Scanner(System.in);
             numberOne = scanner.nextFloat();
+
             System.out.println();
+
             System.out.print("Input second number: ");
             numberTwo = scanner.nextFloat();
 
-            showMainMenu();
+
         } catch (InputMismatchException ex) {
             System.out.println("Please input valid number:");
             getInputs();
         }
-
     }
 
     public void showMainMenu() {
+        getInputs();
         System.out.println("what would you like to do with the numbers");
         System.out.println("1 plus");
         System.out.println("2 subtract");
@@ -53,8 +55,6 @@ public class Calculator {
         }
         System.out.println(result);
         System.out.println("Thanks for using our calculator");
-
-
     }
 
     private float add() {
@@ -72,7 +72,5 @@ public class Calculator {
     private float divide() {
         return numberOne / numberTwo;
     }
-
-
 }
 
