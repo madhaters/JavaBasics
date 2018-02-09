@@ -1,6 +1,12 @@
 package com.adil.inheritence;
 
-public class Cat extends Animal {
+public class Cat extends Animal implements OnWalk {
+    @Override
+    public void walk() {
+        System.out.println("cat is walking");
+
+    }
+
     @Override
     public void speak() {
         System.out.println("Cat mew");
@@ -8,7 +14,7 @@ public class Cat extends Animal {
 
     @Override
     public void type() {
-        System.out.println("type is cat");
+        System.out.println("Type is cat");
 
     }
 }

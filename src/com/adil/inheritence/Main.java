@@ -25,23 +25,27 @@ public class Main {
                 switch (choiceNumber) {
                     case 1:
                         Dog dg = new Dog();
-                        dg.speak();
                         dg.type();
+                        dg.speak();
+                        dg.walk();
                         break;
                     case 2:
                         Goat g = new Goat();
-                        g.speak();
                         g.type();
+                        g.speak();
+                        g.walk();
                         break;
                     case 3:
                         Cow c = new Cow();
-                        c.speak();
                         c.type();
+                        c.speak();
+                        c.walk();
                         break;
                     case 4:
                         Cat cw = new Cat();
-                        cw.speak();
                         cw.type();
+                        cw.speak();
+                        cw.walk();
                         break;
                 }
             } catch (InputMismatchException ex) {
