@@ -66,6 +66,7 @@ public class Calculator {
             System.out.println("Thanks for using our calculator");
         } while (choice == 0);
     }
+
     private float add() {
         return numberOne + numberTwo;
     }
