@@ -1,5 +1,5 @@
 package com.adil.anonymous1;
 
 interface OnItemClickList {
-    void onClick();
+    void onClick(int input);
 }
