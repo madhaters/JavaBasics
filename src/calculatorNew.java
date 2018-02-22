@@ -7,32 +7,34 @@ public class calculatorNew {
             Scanner scan=new Scanner(System.in);
             a=scan.nextFloat();
             b=scan.nextFloat();
-            System.out.println("1.ADDITION:\n2.subtraction:\n3.multiplication:\n4.division:\n5.exit\nenter choice:");
+            System.out.println("1.ADDITION:\n2.subtraction:\n3.multiplication:\n4.division:\n5.modulus\n6.exit\nenter choice:");
             int choice=0;
-            if(choice<=5){
+            if(choice<=6){
             choice=scan.nextInt();}
             else {
                 System.out.print( "you entered wrong number");}
-            switch(choice){
-                case 1:{
-                    result=add(a,b);
-                    System.out.println("addition is:"+result);
-                    break;}
-                case 2:{
-                    result=sub(a,b);
-                    System.out.println("subtractio is:"+result);
-                    break;}
+            switch(choice) {
+                case 1:
+                    result = add(a, b);
+                    System.out.println("addition is:" + result);
+                    break;
+                case 2:
+                    result = sub(a, b);
+                    System.out.println("subtractio is:" + result);
+                    break;
                 case 3:
-                {
-                    result=multi(a,b);
-                    System.out.println("multiplication is:"+result);
-                    break;}
+                    result = multi(a, b);
+                    System.out.println("multiplication is:" + result);
+                    break;
                 case 4:
-                {
-                    result=div(a,b);
-                    System.out.println("division is:"+result);
-                    break;}
+                    result = div(a, b);
+                    System.out.println("division is:" + result);
+                    break;
                 case 5:
+                    result = mod(a, b);
+                    System.out.println("modulus is:" + result);
+                    break;
+                case 6:
                     System.exit(0);
                     break;
                 default:
@@ -41,9 +43,8 @@ public class calculatorNew {
             }
                 System.out.print("\n------------------\n");
             }
-        public static float add(float a,float b)
-        {
-            return a+b;
+        public static float add(float a,float b) {
+            return a + b;
         }
         public static float sub(float a,float b)
         {
@@ -51,11 +52,16 @@ public class calculatorNew {
         }
         public static float multi(float a,float b)
         {
+
             return a*b;
         }
         public static float div(float a,float b)
         {
             return a/b;
+        }
+          public static float mod(float a,float b)
+        {
+            return a%b;
         }
     }
 
