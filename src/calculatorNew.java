@@ -1,8 +1,9 @@
 import java.util.Scanner;
 public class calculatorNew {
-
     public static void main(String []args){
         float a,b,result;
+        calculatorNew calc=new calculatorNew();
+
         System.out.println("enter two numbers:");
             Scanner scan=new Scanner(System.in);
             a=scan.nextFloat();
@@ -15,23 +16,23 @@ public class calculatorNew {
                 System.out.print( "you entered wrong number");}
             switch(choice) {
                 case 1:
-                    result = add(a, b);
+                    result = calc.add(a, b);
                     System.out.println("addition is:" + result);
                     break;
                 case 2:
-                    result = sub(a, b);
-                    System.out.println("subtractio is:" + result);
+                    result = calc.sub(a, b);
+                    System.out.println("subtraction is:" + result);
                     break;
                 case 3:
-                    result = multi(a, b);
+                    result = calc.multi(a, b);
                     System.out.println("multiplication is:" + result);
                     break;
                 case 4:
-                    result = div(a, b);
+                    result = calc.div(a, b);
                     System.out.println("division is:" + result);
                     break;
                 case 5:
-                    result = mod(a, b);
+                    result = calc.mod(a, b);
                     System.out.println("modulus is:" + result);
                     break;
                 case 6:
@@ -43,23 +44,24 @@ public class calculatorNew {
             }
                 System.out.print("\n------------------\n");
             }
-        public static float add(float a,float b) {
+
+        public  float add(float a,float b) {
             return a + b;
         }
-        public static float sub(float a,float b)
+        public  float sub(float a,float b)
         {
             return a-b;
         }
-        public static float multi(float a,float b)
+        public  float multi(float a,float b)
         {
 
             return a*b;
         }
-        public static float div(float a,float b)
+        public  float div(float a,float b)
         {
             return a/b;
         }
-          public static float mod(float a,float b)
+          public float mod(float a,float b)
         {
             return a%b;
         }
