@@ -9,7 +9,7 @@ public class FirstSample {
         System.out.print("\nAnimal is:" + aDog.getName() + "");
         System.out.print("\nAnimal is:" + aCat.getName() + "");
         System.out.print("\nCat Price:" + aCat.getPrice() + "");
-        System.out.print("\nAnimal Price:" + aDog.getPrice() + "");
+        System.out.print("\nDog Price:" + aDog.getPrice() + "");
         System.out.print("\nDog bread is:" + aDog.getBread() + "");
         System.out.print("\nCat bread is:" + aCat.getBread() + "");
         System.out.print("\nDog Stiffness:" + aDog.getStiffness() + "");
